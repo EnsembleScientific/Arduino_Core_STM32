@@ -8,6 +8,7 @@ menu.xusb=USB speed (if available)
 menu.virtio=Virtual serial support
 
 menu.opt=Optimize
+menu.dbg=Debug symbols
 menu.rtlib=C Runtime Library
 menu.upload_method=Upload method
 
@@ -356,7 +357,7 @@ Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.mcu=cortex-m0plus
 Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.board=NUCLEO_G0B1RE
 Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.series=STM32G0xx
 Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.product_line=STM32G0B1xx
-Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.variant=STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T
+Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
 Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.cmsis_lib_gcc=arm_cortexM0l_math
 Nucleo_64.menu.pnum.NUCLEO_G0B1RE.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} -D__CORTEX_SC=0
 
@@ -501,6 +502,19 @@ Nucleo_64.menu.pnum.P_NUCLEO_WB55RG.build.series=STM32WBxx
 Nucleo_64.menu.pnum.P_NUCLEO_WB55RG.build.product_line=STM32WB55xx
 Nucleo_64.menu.pnum.P_NUCLEO_WB55RG.build.variant=STM32WBxx/WB55R(C-E-G)V
 Nucleo_64.menu.pnum.P_NUCLEO_WB55RG.build.cmsis_lib_gcc=arm_cortexM4lf_math
+
+# NUCLEO_WL55JC1 board
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1=Nucleo WL55JC1
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.node="NOD_WL55JC"
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.upload.maximum_size=262144
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.upload.maximum_data_size=65536
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.build.mcu=cortex-m4
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.build.board=NUCLEO_WL55JC1
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.build.series=STM32WLxx
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.build.product_line=STM32WLE5xx
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.build.cmsis_lib_gcc=arm_cortexM4lf_math
+Nucleo_64.menu.pnum.NUCLEO_WL55JC1.build.extra_flags=-D{build.product_line} -DUSE_CM4_STARTUP_FILE {build.xSerial}
 
 # Upload menu
 Nucleo_64.menu.upload_method.MassStorage=Mass Storage
@@ -809,6 +823,20 @@ Disco.menu.pnum.B_L072Z_LRWAN1.build.variant=STM32L0xx/L072CBY_L072CZ(E-Y)_L073C
 Disco.menu.pnum.B_L072Z_LRWAN1.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
 Disco.menu.pnum.B_L072Z_LRWAN1.build.cmsis_lib_gcc=arm_cortexM0l_math
 Disco.menu.pnum.B_L072Z_LRWAN1.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} -D__CORTEX_SC=0
+
+# STM32WB5MM-DK board
+Disco.menu.pnum.STM32WB5MM_DK=STM32WB5MM-DK
+Disco.menu.pnum.STM32WB5MM_DK.node="DIS_WB5MMG"
+Disco.menu.pnum.STM32WB5MM_DK.upload.maximum_size=827392
+Disco.menu.pnum.STM32WB5MM_DK.upload.maximum_data_size=196608
+Disco.menu.pnum.STM32WB5MM_DK.build.mcu=cortex-m4
+Disco.menu.pnum.STM32WB5MM_DK.build.flags.fp=-mfpu=fpv4-sp-d16 -mfloat-abi=hard
+Disco.menu.pnum.STM32WB5MM_DK.build.board=STM32WB5MM_DK
+Disco.menu.pnum.STM32WB5MM_DK.build.series=STM32WBxx
+Disco.menu.pnum.STM32WB5MM_DK.build.product_line=STM32WB5Mxx
+Disco.menu.pnum.STM32WB5MM_DK.build.variant=STM32WBxx/WB5MMGH
+Disco.menu.pnum.STM32WB5MM_DK.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
+Disco.menu.pnum.STM32WB5MM_DK.build.cmsis_lib_gcc=arm_cortexM4lf_math
 
 # Upload menu
 Disco.menu.upload_method.MassStorage=Mass Storage
@@ -3280,7 +3308,7 @@ GenG0.menu.pnum.GENERIC_G0B1RBTX.upload.maximum_size=131072
 GenG0.menu.pnum.GENERIC_G0B1RBTX.upload.maximum_data_size=147456
 GenG0.menu.pnum.GENERIC_G0B1RBTX.build.board=GENERIC_G0B1RBTX
 GenG0.menu.pnum.GENERIC_G0B1RBTX.build.product_line=STM32G0B1xx
-GenG0.menu.pnum.GENERIC_G0B1RBTX.build.variant=STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T
+GenG0.menu.pnum.GENERIC_G0B1RBTX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
 
 # Generic G0B1RCTx
 GenG0.menu.pnum.GENERIC_G0B1RCTX=Generic G0B1RCTx
@@ -3288,7 +3316,15 @@ GenG0.menu.pnum.GENERIC_G0B1RCTX.upload.maximum_size=262144
 GenG0.menu.pnum.GENERIC_G0B1RCTX.upload.maximum_data_size=147456
 GenG0.menu.pnum.GENERIC_G0B1RCTX.build.board=GENERIC_G0B1RCTX
 GenG0.menu.pnum.GENERIC_G0B1RCTX.build.product_line=STM32G0B1xx
-GenG0.menu.pnum.GENERIC_G0B1RCTX.build.variant=STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T
+GenG0.menu.pnum.GENERIC_G0B1RCTX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
+
+# Generic G0B1RCIx
+GenG0.menu.pnum.GENERIC_G0B1RCIX=Generic G0B1RCIx
+GenG0.menu.pnum.GENERIC_G0B1RCIX.upload.maximum_size=262144
+GenG0.menu.pnum.GENERIC_G0B1RCIX.upload.maximum_data_size=147456
+GenG0.menu.pnum.GENERIC_G0B1RCIX.build.board=GENERIC_G0B1RCIX
+GenG0.menu.pnum.GENERIC_G0B1RCIX.build.product_line=STM32G0B1xx
+GenG0.menu.pnum.GENERIC_G0B1RCIX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
 
 # Generic G0B1RETx
 GenG0.menu.pnum.GENERIC_G0B1RETX=Generic G0B1RETx
@@ -3296,7 +3332,15 @@ GenG0.menu.pnum.GENERIC_G0B1RETX.upload.maximum_size=524288
 GenG0.menu.pnum.GENERIC_G0B1RETX.upload.maximum_data_size=147456
 GenG0.menu.pnum.GENERIC_G0B1RETX.build.board=GENERIC_G0B1RETX
 GenG0.menu.pnum.GENERIC_G0B1RETX.build.product_line=STM32G0B1xx
-GenG0.menu.pnum.GENERIC_G0B1RETX.build.variant=STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T
+GenG0.menu.pnum.GENERIC_G0B1RETX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
+
+# Generic G0B1REIx
+GenG0.menu.pnum.GENERIC_G0B1REIX=Generic G0B1REIx
+GenG0.menu.pnum.GENERIC_G0B1REIX.upload.maximum_size=524288
+GenG0.menu.pnum.GENERIC_G0B1REIX.upload.maximum_data_size=147456
+GenG0.menu.pnum.GENERIC_G0B1REIX.build.board=GENERIC_G0B1REIX
+GenG0.menu.pnum.GENERIC_G0B1REIX.build.product_line=STM32G0B1xx
+GenG0.menu.pnum.GENERIC_G0B1REIX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
 
 # Generic G0C1RCTx
 GenG0.menu.pnum.GENERIC_G0C1RCTX=Generic G0C1RCTx
@@ -3304,7 +3348,15 @@ GenG0.menu.pnum.GENERIC_G0C1RCTX.upload.maximum_size=262144
 GenG0.menu.pnum.GENERIC_G0C1RCTX.upload.maximum_data_size=147456
 GenG0.menu.pnum.GENERIC_G0C1RCTX.build.board=GENERIC_G0C1RCTX
 GenG0.menu.pnum.GENERIC_G0C1RCTX.build.product_line=STM32G0C1xx
-GenG0.menu.pnum.GENERIC_G0C1RCTX.build.variant=STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T
+GenG0.menu.pnum.GENERIC_G0C1RCTX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
+
+# Generic G0C1RCIx
+GenG0.menu.pnum.GENERIC_G0C1RCIX=Generic G0C1RCIx
+GenG0.menu.pnum.GENERIC_G0C1RCIX.upload.maximum_size=262144
+GenG0.menu.pnum.GENERIC_G0C1RCIX.upload.maximum_data_size=147456
+GenG0.menu.pnum.GENERIC_G0C1RCIX.build.board=GENERIC_G0C1RCIX
+GenG0.menu.pnum.GENERIC_G0C1RCIX.build.product_line=STM32G0C1xx
+GenG0.menu.pnum.GENERIC_G0C1RCIX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
 
 # Generic G0C1RETx
 GenG0.menu.pnum.GENERIC_G0C1RETX=Generic G0C1RETx
@@ -3312,7 +3364,15 @@ GenG0.menu.pnum.GENERIC_G0C1RETX.upload.maximum_size=524288
 GenG0.menu.pnum.GENERIC_G0C1RETX.upload.maximum_data_size=147456
 GenG0.menu.pnum.GENERIC_G0C1RETX.build.board=GENERIC_G0C1RETX
 GenG0.menu.pnum.GENERIC_G0C1RETX.build.product_line=STM32G0C1xx
-GenG0.menu.pnum.GENERIC_G0C1RETX.build.variant=STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T
+GenG0.menu.pnum.GENERIC_G0C1RETX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
+
+# Generic G0C1REIx
+GenG0.menu.pnum.GENERIC_G0C1REIX=Generic G0C1REIx
+GenG0.menu.pnum.GENERIC_G0C1REIX.upload.maximum_size=524288
+GenG0.menu.pnum.GENERIC_G0C1REIX.upload.maximum_data_size=147456
+GenG0.menu.pnum.GENERIC_G0C1REIX.build.board=GENERIC_G0C1REIX
+GenG0.menu.pnum.GENERIC_G0C1REIX.build.product_line=STM32G0C1xx
+GenG0.menu.pnum.GENERIC_G0C1REIX.build.variant=STM32G0xx/G0B1RBT_G0B1R(C-E)(I-T)_G0C1R(C-E)(I-T)
 
 # Upload menu
 GenG0.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
@@ -3601,9 +3661,41 @@ GenH7.menu.pnum.DAISY_SEED.upload.maximum_data_size=524288
 GenH7.menu.pnum.DAISY_SEED.build.board=DAISY_SEED
 GenH7.menu.pnum.DAISY_SEED.build.product_line=STM32H750xx
 GenH7.menu.pnum.DAISY_SEED.build.variant_h=variant_{build.board}.h
-GenH7.menu.pnum.DAISY_SEED.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.DAISY_SEED.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 GenH7.menu.pnum.DAISY_SEED.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
 GenH7.menu.pnum.DAISY_SEED.build.ldscript=DAISY_SEED.ld
+
+# Generic H742IGKx
+GenH7.menu.pnum.GENERIC_H742IGKX=Generic H742IGKx
+GenH7.menu.pnum.GENERIC_H742IGKX.upload.maximum_size=1048576
+GenH7.menu.pnum.GENERIC_H742IGKX.upload.maximum_data_size=524288
+GenH7.menu.pnum.GENERIC_H742IGKX.build.board=GENERIC_H742IGKX
+GenH7.menu.pnum.GENERIC_H742IGKX.build.product_line=STM32H742xx
+GenH7.menu.pnum.GENERIC_H742IGKX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
+
+# Generic H742IIKx
+GenH7.menu.pnum.GENERIC_H742IIKX=Generic H742IIKx
+GenH7.menu.pnum.GENERIC_H742IIKX.upload.maximum_size=2097152
+GenH7.menu.pnum.GENERIC_H742IIKX.upload.maximum_data_size=524288
+GenH7.menu.pnum.GENERIC_H742IIKX.build.board=GENERIC_H742IIKX
+GenH7.menu.pnum.GENERIC_H742IIKX.build.product_line=STM32H742xx
+GenH7.menu.pnum.GENERIC_H742IIKX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
+
+# Generic H742IGTx
+GenH7.menu.pnum.GENERIC_H742IGTX=Generic H742IGTx
+GenH7.menu.pnum.GENERIC_H742IGTX.upload.maximum_size=1048576
+GenH7.menu.pnum.GENERIC_H742IGTX.upload.maximum_data_size=524288
+GenH7.menu.pnum.GENERIC_H742IGTX.build.board=GENERIC_H742IGTX
+GenH7.menu.pnum.GENERIC_H742IGTX.build.product_line=STM32H742xx
+GenH7.menu.pnum.GENERIC_H742IGTX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
+
+# Generic H742IITx
+GenH7.menu.pnum.GENERIC_H742IITX=Generic H742IITx
+GenH7.menu.pnum.GENERIC_H742IITX.upload.maximum_size=2097152
+GenH7.menu.pnum.GENERIC_H742IITX.upload.maximum_data_size=524288
+GenH7.menu.pnum.GENERIC_H742IITX.build.board=GENERIC_H742IITX
+GenH7.menu.pnum.GENERIC_H742IITX.build.product_line=STM32H742xx
+GenH7.menu.pnum.GENERIC_H742IITX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H742VGHx
 GenH7.menu.pnum.GENERIC_H742VGHX=Generic H742VGHx
@@ -3659,7 +3751,7 @@ GenH7.menu.pnum.GENERIC_H743IGKX.upload.maximum_size=1048576
 GenH7.menu.pnum.GENERIC_H743IGKX.upload.maximum_data_size=524288
 GenH7.menu.pnum.GENERIC_H743IGKX.build.board=GENERIC_H743IGKX
 GenH7.menu.pnum.GENERIC_H743IGKX.build.product_line=STM32H743xx
-GenH7.menu.pnum.GENERIC_H743IGKX.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.GENERIC_H743IGKX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H743IGTx
 GenH7.menu.pnum.GENERIC_H743IGTX=Generic H743IGTx
@@ -3667,7 +3759,7 @@ GenH7.menu.pnum.GENERIC_H743IGTX.upload.maximum_size=1048576
 GenH7.menu.pnum.GENERIC_H743IGTX.upload.maximum_data_size=524288
 GenH7.menu.pnum.GENERIC_H743IGTX.build.board=GENERIC_H743IGTX
 GenH7.menu.pnum.GENERIC_H743IGTX.build.product_line=STM32H743xx
-GenH7.menu.pnum.GENERIC_H743IGTX.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.GENERIC_H743IGTX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H743IIKx
 GenH7.menu.pnum.GENERIC_H743IIKX=Generic H743IIKx
@@ -3675,7 +3767,7 @@ GenH7.menu.pnum.GENERIC_H743IIKX.upload.maximum_size=2097152
 GenH7.menu.pnum.GENERIC_H743IIKX.upload.maximum_data_size=524288
 GenH7.menu.pnum.GENERIC_H743IIKX.build.board=GENERIC_H743IIKX
 GenH7.menu.pnum.GENERIC_H743IIKX.build.product_line=STM32H743xx
-GenH7.menu.pnum.GENERIC_H743IIKX.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.GENERIC_H743IIKX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H743IITx
 GenH7.menu.pnum.GENERIC_H743IITX=Generic H743IITx
@@ -3683,7 +3775,7 @@ GenH7.menu.pnum.GENERIC_H743IITX.upload.maximum_size=2097152
 GenH7.menu.pnum.GENERIC_H743IITX.upload.maximum_data_size=524288
 GenH7.menu.pnum.GENERIC_H743IITX.build.board=GENERIC_H743IITX
 GenH7.menu.pnum.GENERIC_H743IITX.build.product_line=STM32H743xx
-GenH7.menu.pnum.GENERIC_H743IITX.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.GENERIC_H743IITX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H743VGHx
 GenH7.menu.pnum.GENERIC_H743VGHX=Generic H743VGHx
@@ -3771,7 +3863,15 @@ GenH7.menu.pnum.GENERIC_H750IBKX.upload.maximum_size=131072
 GenH7.menu.pnum.GENERIC_H750IBKX.upload.maximum_data_size=524288
 GenH7.menu.pnum.GENERIC_H750IBKX.build.board=GENERIC_H750IBKX
 GenH7.menu.pnum.GENERIC_H750IBKX.build.product_line=STM32H750xx
-GenH7.menu.pnum.GENERIC_H750IBKX.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.GENERIC_H750IBKX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
+
+# Generic H750IBTx
+GenH7.menu.pnum.GENERIC_H750IBTX=Generic H750IBTx
+GenH7.menu.pnum.GENERIC_H750IBTX.upload.maximum_size=131072
+GenH7.menu.pnum.GENERIC_H750IBTX.upload.maximum_data_size=524288
+GenH7.menu.pnum.GENERIC_H750IBTX.build.board=GENERIC_H750IBTX
+GenH7.menu.pnum.GENERIC_H750IBTX.build.product_line=STM32H750xx
+GenH7.menu.pnum.GENERIC_H750IBTX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H750VBTx
 GenH7.menu.pnum.GENERIC_H750VBTX=Generic H750VBTx
@@ -3795,7 +3895,7 @@ GenH7.menu.pnum.GENERIC_H753IIKX.upload.maximum_size=2097152
 GenH7.menu.pnum.GENERIC_H753IIKX.upload.maximum_data_size=524288
 GenH7.menu.pnum.GENERIC_H753IIKX.build.board=GENERIC_H753IIKX
 GenH7.menu.pnum.GENERIC_H753IIKX.build.product_line=STM32H753xx
-GenH7.menu.pnum.GENERIC_H753IIKX.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.GENERIC_H753IIKX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H753IITx
 GenH7.menu.pnum.GENERIC_H753IITX=Generic H753IITx
@@ -3803,7 +3903,7 @@ GenH7.menu.pnum.GENERIC_H753IITX.upload.maximum_size=2097152
 GenH7.menu.pnum.GENERIC_H753IITX.upload.maximum_data_size=524288
 GenH7.menu.pnum.GENERIC_H753IITX.build.board=GENERIC_H753IITX
 GenH7.menu.pnum.GENERIC_H753IITX.build.product_line=STM32H753xx
-GenH7.menu.pnum.GENERIC_H753IITX.build.variant=STM32H7xx/H743I(G-I)(K-T)_H750IBK_H753II(K-T)
+GenH7.menu.pnum.GENERIC_H753IITX.build.variant=STM32H7xx/H742I(G-I)(K-T)_H743I(G-I)(K-T)_H750IB(K-T)_H753II(K-T)
 
 # Generic H753VIHx
 GenH7.menu.pnum.GENERIC_H753VIHX=Generic H753VIHx
@@ -4407,6 +4507,16 @@ GenL4.build.flags.fp=-mfpu=fpv4-sp-d16 -mfloat-abi=hard
 GenL4.build.series=STM32L4xx
 GenL4.build.cmsis_lib_gcc=arm_cortexM4lf_math
 
+# Swan R5
+GenL4.menu.pnum.SWAN_R5=Swan R5
+GenL4.menu.pnum.SWAN_R5.upload.maximum_size=2097152
+GenL4.menu.pnum.SWAN_R5.upload.maximum_data_size=655360
+GenL4.menu.pnum.SWAN_R5.build.board=SWAN_R5
+GenL4.menu.pnum.SWAN_R5.build.product_line=STM32L4R5xx
+GenL4.menu.pnum.SWAN_R5.build.variant=STM32L4xx/L4R5Z(G-I)Y_L4R9Z(G-I)Y_L4S5ZIY_L4S9ZIY
+GenL4.menu.pnum.SWAN_R5.build.variant_h=variant_{build.board}.h
+GenL4.menu.pnum.SWAN_R5.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
+
 # Generic L412K8Tx
 GenL4.menu.pnum.GENERIC_L412K8TX=Generic L412K8Tx
 GenL4.menu.pnum.GENERIC_L412K8TX.upload.maximum_size=65536
@@ -4479,6 +4589,38 @@ GenL4.menu.pnum.GENERIC_L442KCUX.build.board=GENERIC_L442KCUX
 GenL4.menu.pnum.GENERIC_L442KCUX.build.product_line=STM32L442xx
 GenL4.menu.pnum.GENERIC_L442KCUX.build.variant=STM32L4xx/L432K(B-C)U_L442KCU
 
+# Generic L433CBTx
+GenL4.menu.pnum.GENERIC_L433CBTX=Generic L433CBTx
+GenL4.menu.pnum.GENERIC_L433CBTX.upload.maximum_size=131072
+GenL4.menu.pnum.GENERIC_L433CBTX.upload.maximum_data_size=65536
+GenL4.menu.pnum.GENERIC_L433CBTX.build.board=GENERIC_L433CBTX
+GenL4.menu.pnum.GENERIC_L433CBTX.build.product_line=STM32L433xx
+GenL4.menu.pnum.GENERIC_L433CBTX.build.variant=STM32L4xx/L433C(B-C)(T-U)_L443CC(T-U)
+
+# Generic L433CCTx
+GenL4.menu.pnum.GENERIC_L433CCTX=Generic L433CCTx
+GenL4.menu.pnum.GENERIC_L433CCTX.upload.maximum_size=262144
+GenL4.menu.pnum.GENERIC_L433CCTX.upload.maximum_data_size=65536
+GenL4.menu.pnum.GENERIC_L433CCTX.build.board=GENERIC_L433CCTX
+GenL4.menu.pnum.GENERIC_L433CCTX.build.product_line=STM32L433xx
+GenL4.menu.pnum.GENERIC_L433CCTX.build.variant=STM32L4xx/L433C(B-C)(T-U)_L443CC(T-U)
+
+# Generic L433CBUx
+GenL4.menu.pnum.GENERIC_L433CBUX=Generic L433CBUx
+GenL4.menu.pnum.GENERIC_L433CBUX.upload.maximum_size=131072
+GenL4.menu.pnum.GENERIC_L433CBUX.upload.maximum_data_size=65536
+GenL4.menu.pnum.GENERIC_L433CBUX.build.board=GENERIC_L433CBUX
+GenL4.menu.pnum.GENERIC_L433CBUX.build.product_line=STM32L433xx
+GenL4.menu.pnum.GENERIC_L433CBUX.build.variant=STM32L4xx/L433C(B-C)(T-U)_L443CC(T-U)
+
+# Generic L433CCUx
+GenL4.menu.pnum.GENERIC_L433CCUX=Generic L433CCUx
+GenL4.menu.pnum.GENERIC_L433CCUX.upload.maximum_size=262144
+GenL4.menu.pnum.GENERIC_L433CCUX.upload.maximum_data_size=65536
+GenL4.menu.pnum.GENERIC_L433CCUX.build.board=GENERIC_L433CCUX
+GenL4.menu.pnum.GENERIC_L433CCUX.build.product_line=STM32L433xx
+GenL4.menu.pnum.GENERIC_L433CCUX.build.variant=STM32L4xx/L433C(B-C)(T-U)_L443CC(T-U)
+
 # Generic L433RCTxP
 GenL4.menu.pnum.GENERIC_L433RCTXP=Generic L433RCTxP
 GenL4.menu.pnum.GENERIC_L433RCTXP.upload.maximum_size=262144
@@ -4486,6 +4628,22 @@ GenL4.menu.pnum.GENERIC_L433RCTXP.upload.maximum_data_size=65536
 GenL4.menu.pnum.GENERIC_L433RCTXP.build.board=GENERIC_L433RCTXP
 GenL4.menu.pnum.GENERIC_L433RCTXP.build.product_line=STM32L433xx
 GenL4.menu.pnum.GENERIC_L433RCTXP.build.variant=STM32L4xx/L433RCTxP
+
+# Generic L443CCTx
+GenL4.menu.pnum.GENERIC_L443CCTX=Generic L443CCTx
+GenL4.menu.pnum.GENERIC_L443CCTX.upload.maximum_size=262144
+GenL4.menu.pnum.GENERIC_L443CCTX.upload.maximum_data_size=65536
+GenL4.menu.pnum.GENERIC_L443CCTX.build.board=GENERIC_L443CCTX
+GenL4.menu.pnum.GENERIC_L443CCTX.build.product_line=STM32L443xx
+GenL4.menu.pnum.GENERIC_L443CCTX.build.variant=STM32L4xx/L433C(B-C)(T-U)_L443CC(T-U)
+
+# Generic L443CCUx
+GenL4.menu.pnum.GENERIC_L443CCUX=Generic L443CCUx
+GenL4.menu.pnum.GENERIC_L443CCUX.upload.maximum_size=262144
+GenL4.menu.pnum.GENERIC_L443CCUX.upload.maximum_data_size=65536
+GenL4.menu.pnum.GENERIC_L443CCUX.build.board=GENERIC_L443CCUX
+GenL4.menu.pnum.GENERIC_L443CCUX.build.product_line=STM32L443xx
+GenL4.menu.pnum.GENERIC_L443CCUX.build.variant=STM32L4xx/L433C(B-C)(T-U)_L443CC(T-U)
 
 # Generic L452RCIx
 GenL4.menu.pnum.GENERIC_L452RCIX=Generic L452RCIx
@@ -4743,6 +4901,14 @@ GenL4.menu.pnum.GENERIC_L4R5ZGTX.build.board=GENERIC_L4R5ZGTX
 GenL4.menu.pnum.GENERIC_L4R5ZGTX.build.product_line=STM32L4R5xx
 GenL4.menu.pnum.GENERIC_L4R5ZGTX.build.variant=STM32L4xx/L4R5Z(G-I)T_L4R7ZIT_L4S5ZIT_L4S7ZIT
 
+# Generic L4R5ZGYx
+GenL4.menu.pnum.GENERIC_L4R5ZGYX=Generic L4R5ZGYx
+GenL4.menu.pnum.GENERIC_L4R5ZGYX.upload.maximum_size=1048576
+GenL4.menu.pnum.GENERIC_L4R5ZGYX.upload.maximum_data_size=655360
+GenL4.menu.pnum.GENERIC_L4R5ZGYX.build.board=GENERIC_L4R5ZGYX
+GenL4.menu.pnum.GENERIC_L4R5ZGYX.build.product_line=STM32L4R5xx
+GenL4.menu.pnum.GENERIC_L4R5ZGYX.build.variant=STM32L4xx/L4R5Z(G-I)Y_L4R9Z(G-I)Y_L4S5ZIY_L4S9ZIY
+
 # Generic L4R5ZITx
 GenL4.menu.pnum.GENERIC_L4R5ZITX=Generic L4R5ZITx
 GenL4.menu.pnum.GENERIC_L4R5ZITX.upload.maximum_size=2097152
@@ -4750,6 +4916,14 @@ GenL4.menu.pnum.GENERIC_L4R5ZITX.upload.maximum_data_size=655360
 GenL4.menu.pnum.GENERIC_L4R5ZITX.build.board=GENERIC_L4R5ZITX
 GenL4.menu.pnum.GENERIC_L4R5ZITX.build.product_line=STM32L4R5xx
 GenL4.menu.pnum.GENERIC_L4R5ZITX.build.variant=STM32L4xx/L4R5Z(G-I)T_L4R7ZIT_L4S5ZIT_L4S7ZIT
+
+# Generic L4R5ZIYx
+GenL4.menu.pnum.GENERIC_L4R5ZIYX=Generic L4R5ZIYx
+GenL4.menu.pnum.GENERIC_L4R5ZIYX.upload.maximum_size=2097152
+GenL4.menu.pnum.GENERIC_L4R5ZIYX.upload.maximum_data_size=655360
+GenL4.menu.pnum.GENERIC_L4R5ZIYX.build.board=GENERIC_L4R5ZIYX
+GenL4.menu.pnum.GENERIC_L4R5ZIYX.build.product_line=STM32L4R5xx
+GenL4.menu.pnum.GENERIC_L4R5ZIYX.build.variant=STM32L4xx/L4R5Z(G-I)Y_L4R9Z(G-I)Y_L4S5ZIY_L4S9ZIY
 
 # Generic L4R5ZITxP
 GenL4.menu.pnum.GENERIC_L4R5ZITXP=Generic L4R5ZITxP
@@ -4783,6 +4957,14 @@ GenL4.menu.pnum.GENERIC_L4R9ZGJX.build.board=GENERIC_L4R9ZGJX
 GenL4.menu.pnum.GENERIC_L4R9ZGJX.build.product_line=STM32L4R9xx
 GenL4.menu.pnum.GENERIC_L4R9ZGJX.build.variant=STM32L4xx/L4R9Z(G-I)J_L4S9ZIJ
 
+# Generic L4R9ZGYx
+GenL4.menu.pnum.GENERIC_L4R9ZGYX=Generic L4R9ZGYx
+GenL4.menu.pnum.GENERIC_L4R9ZGYX.upload.maximum_size=1048576
+GenL4.menu.pnum.GENERIC_L4R9ZGYX.upload.maximum_data_size=655360
+GenL4.menu.pnum.GENERIC_L4R9ZGYX.build.board=GENERIC_L4R9ZGYX
+GenL4.menu.pnum.GENERIC_L4R9ZGYX.build.product_line=STM32L4R9xx
+GenL4.menu.pnum.GENERIC_L4R9ZGYX.build.variant=STM32L4xx/L4R5Z(G-I)Y_L4R9Z(G-I)Y_L4S5ZIY_L4S9ZIY
+
 # Generic L4R9ZIJx
 GenL4.menu.pnum.GENERIC_L4R9ZIJX=Generic L4R9ZIJx
 GenL4.menu.pnum.GENERIC_L4R9ZIJX.upload.maximum_size=2097152
@@ -4790,6 +4972,14 @@ GenL4.menu.pnum.GENERIC_L4R9ZIJX.upload.maximum_data_size=655360
 GenL4.menu.pnum.GENERIC_L4R9ZIJX.build.board=GENERIC_L4R9ZIJX
 GenL4.menu.pnum.GENERIC_L4R9ZIJX.build.product_line=STM32L4R9xx
 GenL4.menu.pnum.GENERIC_L4R9ZIJX.build.variant=STM32L4xx/L4R9Z(G-I)J_L4S9ZIJ
+
+# Generic L4R9ZIYx
+GenL4.menu.pnum.GENERIC_L4R9ZIYX=Generic L4R9ZIYx
+GenL4.menu.pnum.GENERIC_L4R9ZIYX.upload.maximum_size=2097152
+GenL4.menu.pnum.GENERIC_L4R9ZIYX.upload.maximum_data_size=655360
+GenL4.menu.pnum.GENERIC_L4R9ZIYX.build.board=GENERIC_L4R9ZIYX
+GenL4.menu.pnum.GENERIC_L4R9ZIYX.build.product_line=STM32L4R9xx
+GenL4.menu.pnum.GENERIC_L4R9ZIYX.build.variant=STM32L4xx/L4R5Z(G-I)Y_L4R9Z(G-I)Y_L4S5ZIY_L4S9ZIY
 
 # Generic L4S5VITx
 GenL4.menu.pnum.GENERIC_L4S5VITX=Generic L4S5VITx
@@ -4806,6 +4996,14 @@ GenL4.menu.pnum.GENERIC_L4S5ZITX.upload.maximum_data_size=655360
 GenL4.menu.pnum.GENERIC_L4S5ZITX.build.board=GENERIC_L4S5ZITX
 GenL4.menu.pnum.GENERIC_L4S5ZITX.build.product_line=STM32L4S5xx
 GenL4.menu.pnum.GENERIC_L4S5ZITX.build.variant=STM32L4xx/L4R5Z(G-I)T_L4R7ZIT_L4S5ZIT_L4S7ZIT
+
+# Generic L4S5ZIYx
+GenL4.menu.pnum.GENERIC_L4S5ZIYX=Generic L4S5ZIYx
+GenL4.menu.pnum.GENERIC_L4S5ZIYX.upload.maximum_size=2097152
+GenL4.menu.pnum.GENERIC_L4S5ZIYX.upload.maximum_data_size=655360
+GenL4.menu.pnum.GENERIC_L4S5ZIYX.build.board=GENERIC_L4S5ZIYX
+GenL4.menu.pnum.GENERIC_L4S5ZIYX.build.product_line=STM32L4S5xx
+GenL4.menu.pnum.GENERIC_L4S5ZIYX.build.variant=STM32L4xx/L4R5Z(G-I)Y_L4R9Z(G-I)Y_L4S5ZIY_L4S9ZIY
 
 # Generic L4S7VITx
 GenL4.menu.pnum.GENERIC_L4S7VITX=Generic L4S7VITx
@@ -4830,6 +5028,14 @@ GenL4.menu.pnum.GENERIC_L4S9ZIJX.upload.maximum_data_size=655360
 GenL4.menu.pnum.GENERIC_L4S9ZIJX.build.board=GENERIC_L4S9ZIJX
 GenL4.menu.pnum.GENERIC_L4S9ZIJX.build.product_line=STM32L4S9xx
 GenL4.menu.pnum.GENERIC_L4S9ZIJX.build.variant=STM32L4xx/L4R9Z(G-I)J_L4S9ZIJ
+
+# Generic L4S9ZIYx
+GenL4.menu.pnum.GENERIC_L4S9ZIYX=Generic L4S9ZIYx
+GenL4.menu.pnum.GENERIC_L4S9ZIYX.upload.maximum_size=2097152
+GenL4.menu.pnum.GENERIC_L4S9ZIYX.upload.maximum_data_size=655360
+GenL4.menu.pnum.GENERIC_L4S9ZIYX.build.board=GENERIC_L4S9ZIYX
+GenL4.menu.pnum.GENERIC_L4S9ZIYX.build.product_line=STM32L4S9xx
+GenL4.menu.pnum.GENERIC_L4S9ZIYX.build.variant=STM32L4xx/L4R5Z(G-I)Y_L4R9Z(G-I)Y_L4S5ZIY_L4S9ZIY
 
 # Upload menu
 GenL4.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
@@ -4935,6 +5141,14 @@ GenWB.menu.pnum.GENERIC_WB55CGUX.build.board=GENERIC_WB55CGUX
 GenWB.menu.pnum.GENERIC_WB55CGUX.build.product_line=STM32WB55xx
 GenWB.menu.pnum.GENERIC_WB55CGUX.build.variant=STM32WBxx/WB55C(C-E-G)U
 
+# Generic WB5MMGHx
+GenWB.menu.pnum.GENERIC_WB5MMGHX=Generic WB5MMGHx
+GenWB.menu.pnum.GENERIC_WB5MMGHX.upload.maximum_size=827392
+GenWB.menu.pnum.GENERIC_WB5MMGHX.upload.maximum_data_size=196608
+GenWB.menu.pnum.GENERIC_WB5MMGHX.build.board=GENERIC_WB5MMGHX
+GenWB.menu.pnum.GENERIC_WB5MMGHX.build.product_line=STM32WB5Mxx
+GenWB.menu.pnum.GENERIC_WB5MMGHX.build.variant=STM32WBxx/WB5MMGH
+
 # Generic WB55RCVx
 GenWB.menu.pnum.GENERIC_WB55RCVX=Generic WB55RCVx
 GenWB.menu.pnum.GENERIC_WB55RCVX.upload.maximum_size=131072
@@ -4974,6 +5188,171 @@ GenWB.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
 GenWB.menu.upload_method.dfuMethod.upload.protocol=2
 GenWB.menu.upload_method.dfuMethod.upload.options=-g
 GenWB.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+################################################################################
+# Generic WL
+GenWL.name=Generic STM32WL series
+
+GenWL.build.core=arduino
+GenWL.build.board=GenWL
+GenWL.build.extra_flags=-D{build.product_line} -DUSE_CM4_STARTUP_FILE {build.xSerial}
+GenWL.build.mcu=cortex-m4
+#GenWL.build.flags.fp=-mfpu=fpv4-sp-d16 -mfloat-abi=hard
+GenWL.build.series=STM32WLxx
+GenWL.build.cmsis_lib_gcc=arm_cortexM4lf_math
+
+# Generic node SE by The Things Industries
+GenWL.menu.pnum.GENERIC_NODE_SE_TTI=Generic Node SE (TTI)
+GenWL.menu.pnum.GENERIC_NODE_SE_TTI.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_NODE_SE_TTI.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_NODE_SE_TTI.build.board=GENERIC_NODE_SE_TTI
+GenWL.menu.pnum.GENERIC_NODE_SE_TTI.build.product_line=STM32WL55xx
+GenWL.menu.pnum.GENERIC_NODE_SE_TTI.build.variant_h=variant_GENERIC_NODE_SE_TTI.h
+GenWL.menu.pnum.GENERIC_NODE_SE_TTI.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WL54CCUx
+GenWL.menu.pnum.GENERIC_WL54CCUX=Generic WL54CCUx
+GenWL.menu.pnum.GENERIC_WL54CCUX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WL54CCUX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WL54CCUX.build.board=GENERIC_WL54CCUX
+GenWL.menu.pnum.GENERIC_WL54CCUX.build.product_line=STM32WL54xx
+GenWL.menu.pnum.GENERIC_WL54CCUX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WL54JCIx
+GenWL.menu.pnum.GENERIC_WL54JCIX=Generic WL54JCIx
+GenWL.menu.pnum.GENERIC_WL54JCIX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WL54JCIX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WL54JCIX.build.board=GENERIC_WL54JCIX
+GenWL.menu.pnum.GENERIC_WL54JCIX.build.product_line=STM32WL54xx
+GenWL.menu.pnum.GENERIC_WL54JCIX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Generic WL55CCUx
+GenWL.menu.pnum.GENERIC_WL55CCUX=Generic WL55CCUx
+GenWL.menu.pnum.GENERIC_WL55CCUX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WL55CCUX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WL55CCUX.build.board=GENERIC_WL55CCUX
+GenWL.menu.pnum.GENERIC_WL55CCUX.build.product_line=STM32WL55xx
+GenWL.menu.pnum.GENERIC_WL55CCUX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WL55JCIx
+GenWL.menu.pnum.GENERIC_WL55JCIX=Generic WL55JCIx
+GenWL.menu.pnum.GENERIC_WL55JCIX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WL55JCIX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WL55JCIX.build.board=GENERIC_WL55JCIX
+GenWL.menu.pnum.GENERIC_WL55JCIX.build.product_line=STM32WL55xx
+GenWL.menu.pnum.GENERIC_WL55JCIX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Generic WLE4C8Ux
+GenWL.menu.pnum.GENERIC_WLE4C8UX=Generic WLE4C8Ux
+GenWL.menu.pnum.GENERIC_WLE4C8UX.upload.maximum_size=65536
+GenWL.menu.pnum.GENERIC_WLE4C8UX.upload.maximum_data_size=20480
+GenWL.menu.pnum.GENERIC_WLE4C8UX.build.board=GENERIC_WLE4C8UX
+GenWL.menu.pnum.GENERIC_WLE4C8UX.build.product_line=STM32WLE4xx
+GenWL.menu.pnum.GENERIC_WLE4C8UX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WLE4CBUx
+GenWL.menu.pnum.GENERIC_WLE4CBUX=Generic WLE4CBUx
+GenWL.menu.pnum.GENERIC_WLE4CBUX.upload.maximum_size=131072
+GenWL.menu.pnum.GENERIC_WLE4CBUX.upload.maximum_data_size=49152
+GenWL.menu.pnum.GENERIC_WLE4CBUX.build.board=GENERIC_WLE4CBUX
+GenWL.menu.pnum.GENERIC_WLE4CBUX.build.product_line=STM32WLE4xx
+GenWL.menu.pnum.GENERIC_WLE4CBUX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WLE4CCUx
+GenWL.menu.pnum.GENERIC_WLE4CCUX=Generic WLE4CCUx
+GenWL.menu.pnum.GENERIC_WLE4CCUX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WLE4CCUX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WLE4CCUX.build.board=GENERIC_WLE4CCUX
+GenWL.menu.pnum.GENERIC_WLE4CCUX.build.product_line=STM32WLE4xx
+GenWL.menu.pnum.GENERIC_WLE4CCUX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WLE4J8Ix
+GenWL.menu.pnum.GENERIC_WLE4J8IX=Generic WLE4J8Ix
+GenWL.menu.pnum.GENERIC_WLE4J8IX.upload.maximum_size=65536
+GenWL.menu.pnum.GENERIC_WLE4J8IX.upload.maximum_data_size=20480
+GenWL.menu.pnum.GENERIC_WLE4J8IX.build.board=GENERIC_WLE4J8IX
+GenWL.menu.pnum.GENERIC_WLE4J8IX.build.product_line=STM32WLE4xx
+GenWL.menu.pnum.GENERIC_WLE4J8IX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Generic WLE4JBIx
+GenWL.menu.pnum.GENERIC_WLE4JBIX=Generic WLE4JBIx
+GenWL.menu.pnum.GENERIC_WLE4JBIX.upload.maximum_size=131072
+GenWL.menu.pnum.GENERIC_WLE4JBIX.upload.maximum_data_size=49152
+GenWL.menu.pnum.GENERIC_WLE4JBIX.build.board=GENERIC_WLE4JBIX
+GenWL.menu.pnum.GENERIC_WLE4JBIX.build.product_line=STM32WLE4xx
+GenWL.menu.pnum.GENERIC_WLE4JBIX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Generic WLE4JCIx
+GenWL.menu.pnum.GENERIC_WLE4JCIX=Generic WLE4JCIx
+GenWL.menu.pnum.GENERIC_WLE4JCIX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WLE4JCIX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WLE4JCIX.build.board=GENERIC_WLE4JCIX
+GenWL.menu.pnum.GENERIC_WLE4JCIX.build.product_line=STM32WLE4xx
+GenWL.menu.pnum.GENERIC_WLE4JCIX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Generic WLE5C8Ux
+GenWL.menu.pnum.GENERIC_WLE5C8UX=Generic WLE5C8Ux
+GenWL.menu.pnum.GENERIC_WLE5C8UX.upload.maximum_size=65536
+GenWL.menu.pnum.GENERIC_WLE5C8UX.upload.maximum_data_size=20480
+GenWL.menu.pnum.GENERIC_WLE5C8UX.build.board=GENERIC_WLE5C8UX
+GenWL.menu.pnum.GENERIC_WLE5C8UX.build.product_line=STM32WLE5xx
+GenWL.menu.pnum.GENERIC_WLE5C8UX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WLE5CBUx
+GenWL.menu.pnum.GENERIC_WLE5CBUX=Generic WLE5CBUx
+GenWL.menu.pnum.GENERIC_WLE5CBUX.upload.maximum_size=131072
+GenWL.menu.pnum.GENERIC_WLE5CBUX.upload.maximum_data_size=49152
+GenWL.menu.pnum.GENERIC_WLE5CBUX.build.board=GENERIC_WLE5CBUX
+GenWL.menu.pnum.GENERIC_WLE5CBUX.build.product_line=STM32WLE5xx
+GenWL.menu.pnum.GENERIC_WLE5CBUX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WLE5CCUx
+GenWL.menu.pnum.GENERIC_WLE5CCUX=Generic WLE5CCUx
+GenWL.menu.pnum.GENERIC_WLE5CCUX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WLE5CCUX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WLE5CCUX.build.board=GENERIC_WLE5CCUX
+GenWL.menu.pnum.GENERIC_WLE5CCUX.build.product_line=STM32WLE5xx
+GenWL.menu.pnum.GENERIC_WLE5CCUX.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+
+# Generic WLE5J8Ix
+GenWL.menu.pnum.GENERIC_WLE5J8IX=Generic WLE5J8Ix
+GenWL.menu.pnum.GENERIC_WLE5J8IX.upload.maximum_size=65536
+GenWL.menu.pnum.GENERIC_WLE5J8IX.upload.maximum_data_size=20480
+GenWL.menu.pnum.GENERIC_WLE5J8IX.build.board=GENERIC_WLE5J8IX
+GenWL.menu.pnum.GENERIC_WLE5J8IX.build.product_line=STM32WLE5xx
+GenWL.menu.pnum.GENERIC_WLE5J8IX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Generic WLE5JBIx
+GenWL.menu.pnum.GENERIC_WLE5JBIX=Generic WLE5JBIx
+GenWL.menu.pnum.GENERIC_WLE5JBIX.upload.maximum_size=131072
+GenWL.menu.pnum.GENERIC_WLE5JBIX.upload.maximum_data_size=49152
+GenWL.menu.pnum.GENERIC_WLE5JBIX.build.board=GENERIC_WLE5JBIX
+GenWL.menu.pnum.GENERIC_WLE5JBIX.build.product_line=STM32WLE5xx
+GenWL.menu.pnum.GENERIC_WLE5JBIX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Generic WLE5JCIx
+GenWL.menu.pnum.GENERIC_WLE5JCIX=Generic WLE5JCIx
+GenWL.menu.pnum.GENERIC_WLE5JCIX.upload.maximum_size=262144
+GenWL.menu.pnum.GENERIC_WLE5JCIX.upload.maximum_data_size=65536
+GenWL.menu.pnum.GENERIC_WLE5JCIX.build.board=GENERIC_WLE5JCIX
+GenWL.menu.pnum.GENERIC_WLE5JCIX.build.product_line=STM32WLE5xx
+GenWL.menu.pnum.GENERIC_WLE5JCIX.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+
+# Upload menu
+GenWL.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
+GenWL.menu.upload_method.swdMethod.upload.protocol=0
+GenWL.menu.upload_method.swdMethod.upload.options=-g
+GenWL.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
+
+GenWL.menu.upload_method.serialMethod=STM32CubeProgrammer (Serial)
+GenWL.menu.upload_method.serialMethod.upload.protocol=1
+GenWL.menu.upload_method.serialMethod.upload.options={serial.port.file} -s
+GenWL.menu.upload_method.serialMethod.upload.tool=stm32CubeProg
+
+GenWL.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
+GenWL.menu.upload_method.dfuMethod.upload.protocol=2
+GenWL.menu.upload_method.dfuMethod.upload.options=-g
+GenWL.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
 
 ################################################################################
 # Electronic Speed Controller boards
@@ -5397,6 +5776,40 @@ GenFlight.menu.upload_method.dfuoMethod.build.flash_offset=0x5000
 GenFlight.menu.upload_method.dfuoMethod.build.bootloader_flags=-DBL_LEGACY_LEAF -DVECT_TAB_OFFSET={build.flash_offset}
 
 ################################################################################
+# elecgator boards
+
+elecgator.name=elecgator boards
+
+elecgator.build.core=arduino
+elecgator.build.board=elecgator
+elecgator.build.variant_h=variant_{build.board}.h
+elecgator.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
+
+# EtherCATduino board
+elecgator.menu.pnum.ETHERCAT_DUINO=EtherCATduino
+elecgator.menu.pnum.ETHERCAT_DUINO.upload.maximum_size=524288
+elecgator.menu.pnum.ETHERCAT_DUINO.upload.maximum_data_size=327680
+elecgator.menu.pnum.ETHERCAT_DUINO.build.mcu=cortex-m7
+elecgator.menu.pnum.ETHERCAT_DUINO.build.flags.fp=-mfpu=fpv4-sp-d16 -mfloat-abi=hard
+elecgator.menu.pnum.ETHERCAT_DUINO.build.board=ETHERCAT_DUINO
+elecgator.menu.pnum.ETHERCAT_DUINO.build.series=STM32F7xx
+elecgator.menu.pnum.ETHERCAT_DUINO.build.product_line=STM32F746xx
+elecgator.menu.pnum.ETHERCAT_DUINO.build.variant=STM32F7xx/F745Z(E-G)T_F746Z(E-G)(T-Y)_F750Z8T_F756ZG(T-Y)
+elecgator.menu.pnum.ETHERCAT_DUINO.build.cmsis_lib_gcc=arm_cortexM7lfsp_math
+elecgator.menu.pnum.ETHERCAT_DUINO.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
+
+# Upload menu
+elecgator.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
+elecgator.menu.upload_method.swdMethod.upload.protocol=0
+elecgator.menu.upload_method.swdMethod.upload.options=-g
+elecgator.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
+
+elecgator.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
+elecgator.menu.upload_method.dfuMethod.upload.protocol=2
+elecgator.menu.upload_method.dfuMethod.upload.options=-g
+elecgator.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+################################################################################
 # Garatronic-McHobby STM32 boards
 
 Garatronic.name=Garatronic-McHobby
@@ -5636,6 +6049,12 @@ GenWB.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
 GenWB.menu.xserial.disabled=Disabled (no Serial support)
 GenWB.menu.xserial.disabled.build.xSerial=
 
+GenWL.menu.xserial.generic=Enabled (generic 'Serial')
+GenWL.menu.xserial.none=Enabled (no generic 'Serial')
+GenWL.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
+GenWL.menu.xserial.disabled=Disabled (no Serial support)
+GenWL.menu.xserial.disabled.build.xSerial=
+
 ESC_board.menu.xserial.generic=Enabled (generic 'Serial')
 ESC_board.menu.xserial.none=Enabled (no generic 'Serial')
 ESC_board.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
@@ -5659,6 +6078,12 @@ GenFlight.menu.xserial.none=Enabled (no generic 'Serial')
 GenFlight.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
 GenFlight.menu.xserial.disabled=Disabled (no Serial support)
 GenFlight.menu.xserial.disabled.build.xSerial=
+
+elecgator.menu.xserial.generic=Enabled (generic 'Serial')
+elecgator.menu.xserial.none=Enabled (no generic 'Serial')
+elecgator.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
+elecgator.menu.xserial.disabled=Disabled (no Serial support)
+elecgator.menu.xserial.disabled.build.xSerial=
 
 Garatronic.menu.xserial.generic=Enabled (generic 'Serial')
 Garatronic.menu.xserial.none=Enabled (no generic 'Serial')
@@ -5922,6 +6347,19 @@ GenFlight.menu.xusb.HS.build.usb_speed=-DUSE_USB_HS
 GenFlight.menu.xusb.HSFS=High Speed in Full Speed mode
 GenFlight.menu.xusb.HSFS.build.usb_speed=-DUSE_USB_HS -DUSE_USB_HS_IN_FS
 
+elecgator.menu.usb.none=None
+elecgator.menu.usb.CDCgen=CDC (generic 'Serial' supersede U(S)ART)
+elecgator.menu.usb.CDCgen.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
+elecgator.menu.usb.CDC=CDC (no generic 'Serial')
+elecgator.menu.usb.CDC.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC -DDISABLE_GENERIC_SERIALUSB
+elecgator.menu.usb.HID=HID (keyboard and mouse)
+elecgator.menu.usb.HID.build.enable_usb={build.usb_flags} -DUSBD_USE_HID_COMPOSITE
+elecgator.menu.xusb.FS=Low/Full Speed
+elecgator.menu.xusb.HS=High Speed
+elecgator.menu.xusb.HS.build.usb_speed=-DUSE_USB_HS
+elecgator.menu.xusb.HSFS=High Speed in Full Speed mode
+elecgator.menu.xusb.HSFS.build.usb_speed=-DUSE_USB_HS -DUSE_USB_HS_IN_FS
+
 Garatronic.menu.usb.none=None
 Garatronic.menu.usb.CDCgen=CDC (generic 'Serial' supersede U(S)ART)
 Garatronic.menu.usb.CDCgen.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
@@ -5970,8 +6408,8 @@ Nucleo_144.menu.opt.o3std=Fastest (-O3)
 Nucleo_144.menu.opt.o3std.build.flags.optimize=-O3
 Nucleo_144.menu.opt.o3lto=Fastest (-O3) with LTO
 Nucleo_144.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Nucleo_144.menu.opt.ogstd=Debug (-g)
-Nucleo_144.menu.opt.ogstd.build.flags.optimize=-g -Og
+Nucleo_144.menu.opt.ogstd=Debug (-Og)
+Nucleo_144.menu.opt.ogstd.build.flags.optimize=-Og
 
 Nucleo_64.menu.opt.osstd=Smallest (-Os default)
 Nucleo_64.menu.opt.oslto=Smallest (-Os) with LTO
@@ -5988,8 +6426,8 @@ Nucleo_64.menu.opt.o3std=Fastest (-O3)
 Nucleo_64.menu.opt.o3std.build.flags.optimize=-O3
 Nucleo_64.menu.opt.o3lto=Fastest (-O3) with LTO
 Nucleo_64.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Nucleo_64.menu.opt.ogstd=Debug (-g)
-Nucleo_64.menu.opt.ogstd.build.flags.optimize=-g -Og
+Nucleo_64.menu.opt.ogstd=Debug (-Og)
+Nucleo_64.menu.opt.ogstd.build.flags.optimize=-Og
 
 Nucleo_32.menu.opt.osstd=Smallest (-Os default)
 Nucleo_32.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6006,8 +6444,8 @@ Nucleo_32.menu.opt.o3std=Fastest (-O3)
 Nucleo_32.menu.opt.o3std.build.flags.optimize=-O3
 Nucleo_32.menu.opt.o3lto=Fastest (-O3) with LTO
 Nucleo_32.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Nucleo_32.menu.opt.ogstd=Debug (-g)
-Nucleo_32.menu.opt.ogstd.build.flags.optimize=-g -Og
+Nucleo_32.menu.opt.ogstd=Debug (-Og)
+Nucleo_32.menu.opt.ogstd.build.flags.optimize=-Og
 
 Disco.menu.opt.osstd=Smallest (-Os default)
 Disco.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6024,8 +6462,8 @@ Disco.menu.opt.o3std=Fastest (-O3)
 Disco.menu.opt.o3std.build.flags.optimize=-O3
 Disco.menu.opt.o3lto=Fastest (-O3) with LTO
 Disco.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Disco.menu.opt.ogstd=Debug (-g)
-Disco.menu.opt.ogstd.build.flags.optimize=-g -Og
+Disco.menu.opt.ogstd=Debug (-Og)
+Disco.menu.opt.ogstd.build.flags.optimize=-Og
 
 Eval.menu.opt.osstd=Smallest (-Os default)
 Eval.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6042,8 +6480,8 @@ Eval.menu.opt.o3std=Fastest (-O3)
 Eval.menu.opt.o3std.build.flags.optimize=-O3
 Eval.menu.opt.o3lto=Fastest (-O3) with LTO
 Eval.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Eval.menu.opt.ogstd=Debug (-g)
-Eval.menu.opt.ogstd.build.flags.optimize=-g -Og
+Eval.menu.opt.ogstd=Debug (-Og)
+Eval.menu.opt.ogstd.build.flags.optimize=-Og
 
 STM32MP1.menu.opt.osstd=Smallest (-Os default)
 STM32MP1.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6060,8 +6498,8 @@ STM32MP1.menu.opt.o3std=Fastest (-O3)
 STM32MP1.menu.opt.o3std.build.flags.optimize=-O3
 STM32MP1.menu.opt.o3lto=Fastest (-O3) with LTO
 STM32MP1.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-STM32MP1.menu.opt.ogstd=Debug (-g)
-STM32MP1.menu.opt.ogstd.build.flags.optimize=-g -Og
+STM32MP1.menu.opt.ogstd=Debug (-Og)
+STM32MP1.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenF0.menu.opt.osstd=Smallest (-Os default)
 GenF0.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6078,8 +6516,8 @@ GenF0.menu.opt.o3std=Fastest (-O3)
 GenF0.menu.opt.o3std.build.flags.optimize=-O3
 GenF0.menu.opt.o3lto=Fastest (-O3) with LTO
 GenF0.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenF0.menu.opt.ogstd=Debug (-g)
-GenF0.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenF0.menu.opt.ogstd=Debug (-Og)
+GenF0.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenF1.menu.opt.osstd=Smallest (-Os default)
 GenF1.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6096,8 +6534,8 @@ GenF1.menu.opt.o3std=Fastest (-O3)
 GenF1.menu.opt.o3std.build.flags.optimize=-O3
 GenF1.menu.opt.o3lto=Fastest (-O3) with LTO
 GenF1.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenF1.menu.opt.ogstd=Debug (-g)
-GenF1.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenF1.menu.opt.ogstd=Debug (-Og)
+GenF1.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenF2.menu.opt.osstd=Smallest (-Os default)
 GenF2.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6114,11 +6552,10 @@ GenF2.menu.opt.o3std=Fastest (-O3)
 GenF2.menu.opt.o3std.build.flags.optimize=-O3
 GenF2.menu.opt.o3lto=Fastest (-O3) with LTO
 GenF2.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenF2.menu.opt.ogstd=Debug (-g)
-GenF2.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenF2.menu.opt.ogstd=Debug (-Og)
+GenF2.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenF3.menu.opt.osstd=Smallest (-Os default)
-GenF3.menu.opt.osstd.build.flags.optimize=-Os
 GenF3.menu.opt.oslto=Smallest (-Os) with LTO
 GenF3.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenF3.menu.opt.o1std=Fast (-O1)
@@ -6133,11 +6570,10 @@ GenF3.menu.opt.o3std=Fastest (-O3)
 GenF3.menu.opt.o3std.build.flags.optimize=-O3
 GenF3.menu.opt.o3lto=Fastest (-O3) with LTO
 GenF3.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenF3.menu.opt.ogstd=Debug (-g)
-GenF3.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenF3.menu.opt.ogstd=Debug (-Og)
+GenF3.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenF4.menu.opt.osstd=Smallest (-Os default)
-GenF4.menu.opt.osstd.build.flags.optimize=-Os
 GenF4.menu.opt.oslto=Smallest (-Os) with LTO
 GenF4.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenF4.menu.opt.o1std=Fast (-O1)
@@ -6152,11 +6588,10 @@ GenF4.menu.opt.o3std=Fastest (-O3)
 GenF4.menu.opt.o3std.build.flags.optimize=-O3
 GenF4.menu.opt.o3lto=Fastest (-O3) with LTO
 GenF4.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenF4.menu.opt.ogstd=Debug (-g)
-GenF4.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenF4.menu.opt.ogstd=Debug (-Og)
+GenF4.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenF7.menu.opt.osstd=Smallest (-Os default)
-GenF7.menu.opt.osstd.build.flags.optimize=-Os
 GenF7.menu.opt.oslto=Smallest (-Os) with LTO
 GenF7.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenF7.menu.opt.o1std=Fast (-O1)
@@ -6171,8 +6606,8 @@ GenF7.menu.opt.o3std=Fastest (-O3)
 GenF7.menu.opt.o3std.build.flags.optimize=-O3
 GenF7.menu.opt.o3lto=Fastest (-O3) with LTO
 GenF7.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenF7.menu.opt.ogstd=Debug (-g)
-GenF7.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenF7.menu.opt.ogstd=Debug (-Og)
+GenF7.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenG0.menu.opt.osstd=Smallest (-Os default)
 GenG0.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6189,11 +6624,10 @@ GenG0.menu.opt.o3std=Fastest (-O3)
 GenG0.menu.opt.o3std.build.flags.optimize=-O3
 GenG0.menu.opt.o3lto=Fastest (-O3) with LTO
 GenG0.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenG0.menu.opt.ogstd=Debug (-g)
-GenG0.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenG0.menu.opt.ogstd=Debug (-Og)
+GenG0.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenG4.menu.opt.osstd=Smallest (-Os default)
-GenG4.menu.opt.osstd.build.flags.optimize=-Os
 GenG4.menu.opt.oslto=Smallest (-Os) with LTO
 GenG4.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenG4.menu.opt.o1std=Fast (-O1)
@@ -6208,8 +6642,8 @@ GenG4.menu.opt.o3std=Fastest (-O3)
 GenG4.menu.opt.o3std.build.flags.optimize=-O3
 GenG4.menu.opt.o3lto=Fastest (-O3) with LTO
 GenG4.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenG4.menu.opt.ogstd=Debug (-g)
-GenG4.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenG4.menu.opt.ogstd=Debug (-Og)
+GenG4.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenH7.menu.opt.osstd=Smallest (-Os default)
 GenH7.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6226,8 +6660,8 @@ GenH7.menu.opt.o3std=Fastest (-O3)
 GenH7.menu.opt.o3std.build.flags.optimize=-O3
 GenH7.menu.opt.o3lto=Fastest (-O3) with LTO
 GenH7.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenH7.menu.opt.ogstd=Debug (-g)
-GenH7.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenH7.menu.opt.ogstd=Debug (-Og)
+GenH7.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenL0.menu.opt.osstd=Smallest (-Os default)
 GenL0.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6244,11 +6678,10 @@ GenL0.menu.opt.o3std=Fastest (-O3)
 GenL0.menu.opt.o3std.build.flags.optimize=-O3
 GenL0.menu.opt.o3lto=Fastest (-O3) with LTO
 GenL0.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenL0.menu.opt.ogstd=Debug (-g)
-GenL0.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenL0.menu.opt.ogstd=Debug (-Og)
+GenL0.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenL1.menu.opt.osstd=Smallest (-Os default)
-GenL1.menu.opt.osstd.build.flags.optimize=-Os
 GenL1.menu.opt.oslto=Smallest (-Os) with LTO
 GenL1.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenL1.menu.opt.o1std=Fast (-O1)
@@ -6263,11 +6696,10 @@ GenL1.menu.opt.o3std=Fastest (-O3)
 GenL1.menu.opt.o3std.build.flags.optimize=-O3
 GenL1.menu.opt.o3lto=Fastest (-O3) with LTO
 GenL1.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenL1.menu.opt.ogstd=Debug (-g)
-GenL1.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenL1.menu.opt.ogstd=Debug (-Og)
+GenL1.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenL4.menu.opt.osstd=Smallest (-Os default)
-GenL4.menu.opt.osstd.build.flags.optimize=-Os
 GenL4.menu.opt.oslto=Smallest (-Os) with LTO
 GenL4.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenL4.menu.opt.o1std=Fast (-O1)
@@ -6282,11 +6714,10 @@ GenL4.menu.opt.o3std=Fastest (-O3)
 GenL4.menu.opt.o3std.build.flags.optimize=-O3
 GenL4.menu.opt.o3lto=Fastest (-O3) with LTO
 GenL4.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenL4.menu.opt.ogstd=Debug (-g)
-GenL4.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenL4.menu.opt.ogstd=Debug (-Og)
+GenL4.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenL5.menu.opt.osstd=Smallest (-Os default)
-GenL5.menu.opt.osstd.build.flags.optimize=-Os
 GenL5.menu.opt.oslto=Smallest (-Os) with LTO
 GenL5.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenL5.menu.opt.o1std=Fast (-O1)
@@ -6301,11 +6732,10 @@ GenL5.menu.opt.o3std=Fastest (-O3)
 GenL5.menu.opt.o3std.build.flags.optimize=-O3
 GenL5.menu.opt.o3lto=Fastest (-O3) with LTO
 GenL5.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenL5.menu.opt.ogstd=Debug (-g)
-GenL5.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenL5.menu.opt.ogstd=Debug (-Og)
+GenL5.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenWB.menu.opt.osstd=Smallest (-Os default)
-GenWB.menu.opt.osstd.build.flags.optimize=-Os
 GenWB.menu.opt.oslto=Smallest (-Os) with LTO
 GenWB.menu.opt.oslto.build.flags.optimize=-Os -flto
 GenWB.menu.opt.o1std=Fast (-O1)
@@ -6320,8 +6750,26 @@ GenWB.menu.opt.o3std=Fastest (-O3)
 GenWB.menu.opt.o3std.build.flags.optimize=-O3
 GenWB.menu.opt.o3lto=Fastest (-O3) with LTO
 GenWB.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenWB.menu.opt.ogstd=Debug (-g)
-GenWB.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenWB.menu.opt.ogstd=Debug (-Og)
+GenWB.menu.opt.ogstd.build.flags.optimize=-Og
+
+GenWL.menu.opt.osstd=Smallest (-Os default)
+GenWL.menu.opt.oslto=Smallest (-Os) with LTO
+GenWL.menu.opt.oslto.build.flags.optimize=-Os -flto
+GenWL.menu.opt.o1std=Fast (-O1)
+GenWL.menu.opt.o1std.build.flags.optimize=-O1
+GenWL.menu.opt.o1lto=Fast (-O1) with LTO
+GenWL.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+GenWL.menu.opt.o2std=Faster (-O2)
+GenWL.menu.opt.o2std.build.flags.optimize=-O2
+GenWL.menu.opt.o2lto=Faster (-O2) with LTO
+GenWL.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+GenWL.menu.opt.o3std=Fastest (-O3)
+GenWL.menu.opt.o3std.build.flags.optimize=-O3
+GenWL.menu.opt.o3lto=Fastest (-O3) with LTO
+GenWL.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+GenWL.menu.opt.ogstd=Debug (-Og)
+GenWL.menu.opt.ogstd.build.flags.optimize=-Og
 
 ESC_board.menu.opt.osstd=Smallest (-Os default)
 ESC_board.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6338,8 +6786,8 @@ ESC_board.menu.opt.o3std=Fastest (-O3)
 ESC_board.menu.opt.o3std.build.flags.optimize=-O3
 ESC_board.menu.opt.o3lto=Fastest (-O3) with LTO
 ESC_board.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-ESC_board.menu.opt.ogstd=Debug (-g)
-ESC_board.menu.opt.ogstd.build.flags.optimize=-g -Og
+ESC_board.menu.opt.ogstd=Debug (-Og)
+ESC_board.menu.opt.ogstd.build.flags.optimize=-Og
 
 LoRa.menu.opt.osstd=Smallest (-Os default)
 LoRa.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6356,8 +6804,8 @@ LoRa.menu.opt.o3std=Fastest (-O3)
 LoRa.menu.opt.o3std.build.flags.optimize=-O3
 LoRa.menu.opt.o3lto=Fastest (-O3) with LTO
 LoRa.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-LoRa.menu.opt.ogstd=Debug (-g)
-LoRa.menu.opt.ogstd.build.flags.optimize=-g -Og
+LoRa.menu.opt.ogstd=Debug (-Og)
+LoRa.menu.opt.ogstd.build.flags.optimize=-Og
 
 3dprinter.menu.opt.osstd=Smallest (-Os default)
 3dprinter.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6374,8 +6822,8 @@ LoRa.menu.opt.ogstd.build.flags.optimize=-g -Og
 3dprinter.menu.opt.o3std.build.flags.optimize=-O3
 3dprinter.menu.opt.o3lto=Fastest (-O3) with LTO
 3dprinter.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-3dprinter.menu.opt.ogstd=Debug (-g)
-3dprinter.menu.opt.ogstd.build.flags.optimize=-g -Og
+3dprinter.menu.opt.ogstd=Debug (-Og)
+3dprinter.menu.opt.ogstd.build.flags.optimize=-Og
 
 GenFlight.menu.opt.osstd=Smallest (-Os default)
 GenFlight.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6392,8 +6840,26 @@ GenFlight.menu.opt.o3std=Fastest (-O3)
 GenFlight.menu.opt.o3std.build.flags.optimize=-O3
 GenFlight.menu.opt.o3lto=Fastest (-O3) with LTO
 GenFlight.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-GenFlight.menu.opt.ogstd=Debug (-g)
-GenFlight.menu.opt.ogstd.build.flags.optimize=-g -Og
+GenFlight.menu.opt.ogstd=Debug (-Og)
+GenFlight.menu.opt.ogstd.build.flags.optimize=-Og
+
+elecgator.menu.opt.osstd=Smallest (-Os default)
+elecgator.menu.opt.oslto=Smallest (-Os) with LTO
+elecgator.menu.opt.oslto.build.flags.optimize=-Os -flto
+elecgator.menu.opt.o1std=Fast (-O1)
+elecgator.menu.opt.o1std.build.flags.optimize=-O1
+elecgator.menu.opt.o1lto=Fast (-O1) with LTO
+elecgator.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+elecgator.menu.opt.o2std=Faster (-O2)
+elecgator.menu.opt.o2std.build.flags.optimize=-O2
+elecgator.menu.opt.o2lto=Faster (-O2) with LTO
+elecgator.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+elecgator.menu.opt.o3std=Fastest (-O3)
+elecgator.menu.opt.o3std.build.flags.optimize=-O3
+elecgator.menu.opt.o3lto=Fastest (-O3) with LTO
+elecgator.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+elecgator.menu.opt.ogstd=Debug (-Og)
+elecgator.menu.opt.ogstd.build.flags.optimize=-Og
 
 Garatronic.menu.opt.osstd=Smallest (-Os default)
 Garatronic.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6410,8 +6876,8 @@ Garatronic.menu.opt.o3std=Fastest (-O3)
 Garatronic.menu.opt.o3std.build.flags.optimize=-O3
 Garatronic.menu.opt.o3lto=Fastest (-O3) with LTO
 Garatronic.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Garatronic.menu.opt.ogstd=Debug (-g)
-Garatronic.menu.opt.ogstd.build.flags.optimize=-g -Og
+Garatronic.menu.opt.ogstd=Debug (-Og)
+Garatronic.menu.opt.ogstd.build.flags.optimize=-Og
 
 Midatronics.menu.opt.osstd=Smallest (-Os default)
 Midatronics.menu.opt.oslto=Smallest (-Os) with LTO
@@ -6428,8 +6894,121 @@ Midatronics.menu.opt.o3std=Fastest (-O3)
 Midatronics.menu.opt.o3std.build.flags.optimize=-O3
 Midatronics.menu.opt.o3lto=Fastest (-O3) with LTO
 Midatronics.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Midatronics.menu.opt.ogstd=Debug (-g)
-Midatronics.menu.opt.ogstd.build.flags.optimize=-g -Og
+Midatronics.menu.opt.ogstd=Debug (-Og)
+Midatronics.menu.opt.ogstd.build.flags.optimize=-Og
+
+# Debug information
+Nucleo_144.menu.dbg.none=None
+Nucleo_144.menu.dbg.enable=Enabled (-g)
+Nucleo_144.menu.dbg.enable.build.flags.debug=-g
+
+Nucleo_64.menu.dbg.none=None
+Nucleo_64.menu.dbg.enable=Enabled (-g)
+Nucleo_64.menu.dbg.enable.build.flags.debug=-g
+
+Nucleo_32.menu.dbg.none=None
+Nucleo_32.menu.dbg.enable=Enabled (-g)
+Nucleo_32.menu.dbg.enable.build.flags.debug=-g
+
+Disco.menu.dbg.none=None
+Disco.menu.dbg.enable=Enabled (-g)
+Disco.menu.dbg.enable.build.flags.debug=-g
+
+Eval.menu.dbg.none=None
+Eval.menu.dbg.enable=Enabled (-g)
+Eval.menu.dbg.enable.build.flags.debug=-g
+
+STM32MP1.menu.dbg.none=None
+STM32MP1.menu.dbg.enable=Enabled (-g)
+STM32MP1.menu.dbg.enable.build.flags.debug=-g
+
+GenF0.menu.dbg.none=None
+GenF0.menu.dbg.enable=Enabled (-g)
+GenF0.menu.dbg.enable.build.flags.debug=-g
+
+GenF1.menu.dbg.none=None
+GenF1.menu.dbg.enable=Enabled (-g)
+GenF1.menu.dbg.enable.build.flags.debug=-g
+
+GenF2.menu.dbg.none=None
+GenF2.menu.dbg.enable=Enabled (-g)
+GenF2.menu.dbg.enable.build.flags.debug=-g
+
+GenF3.menu.dbg.none=None
+GenF3.menu.dbg.enable=Enabled (-g)
+GenF3.menu.dbg.enable.build.flags.debug=-g
+
+GenF4.menu.dbg.none=None
+GenF4.menu.dbg.enable=Enabled (-g)
+GenF4.menu.dbg.enable.build.flags.debug=-g
+
+GenF7.menu.dbg.none=None
+GenF7.menu.dbg.enable=Enabled (-g)
+GenF7.menu.dbg.enable.build.flags.debug=-g
+
+GenG0.menu.dbg.none=None
+GenG0.menu.dbg.enable=Enabled (-g)
+GenG0.menu.dbg.enable.build.flags.debug=-g
+
+GenG4.menu.dbg.none=None
+GenG4.menu.dbg.enable=Enabled (-g)
+GenG4.menu.dbg.enable.build.flags.debug=-g
+
+GenH7.menu.dbg.none=None
+GenH7.menu.dbg.enable=Enabled (-g)
+GenH7.menu.dbg.enable.build.flags.debug=-g
+
+GenL0.menu.dbg.none=None
+GenL0.menu.dbg.enable=Enabled (-g)
+GenL0.menu.dbg.enable.build.flags.debug=-g
+
+GenL1.menu.dbg.none=None
+GenL1.menu.dbg.enable=Enabled (-g)
+GenL1.menu.dbg.enable.build.flags.debug=-g
+
+GenL4.menu.dbg.none=None
+GenL4.menu.dbg.enable=Enabled (-g)
+GenL4.menu.dbg.enable.build.flags.debug=-g
+
+GenL5.menu.dbg.none=None
+GenL5.menu.dbg.enable=Enabled (-g)
+GenL5.menu.dbg.enable.build.flags.debug=-g
+
+GenWB.menu.dbg.none=None
+GenWB.menu.dbg.enable=Enabled (-g)
+GenWB.menu.dbg.enable.build.flags.debug=-g
+
+GenWL.menu.dbg.none=None
+GenWL.menu.dbg.enable=Enabled (-g)
+GenWL.menu.dbg.enable.build.flags.debug=-g
+
+ESC_board.menu.dbg.none=None
+ESC_board.menu.dbg.enable=Enabled (-g)
+ESC_board.menu.dbg.enable.build.flags.debug=-g
+
+LoRa.menu.dbg.none=None
+LoRa.menu.dbg.enable=Enabled (-g)
+LoRa.menu.dbg.enable.build.flags.debug=-g
+
+3dprinter.menu.dbg.none=None
+3dprinter.menu.dbg.enable=Enabled (-g)
+3dprinter.menu.dbg.enable.build.flags.debug=-g
+
+GenFlight.menu.dbg.none=None
+GenFlight.menu.dbg.enable=Enabled (-g)
+GenFlight.menu.dbg.enable.build.flags.debug=-g
+
+elecgator.menu.dbg.none=None
+elecgator.menu.dbg.enable=Enabled (-g)
+elecgator.menu.dbg.enable.build.flags.debug=-g
+
+Garatronic.menu.dbg.none=None
+Garatronic.menu.dbg.enable=Enabled (-g)
+Garatronic.menu.dbg.enable.build.flags.debug=-g
+
+Midatronics.menu.dbg.none=None
+Midatronics.menu.dbg.enable=Enabled (-g)
+Midatronics.menu.dbg.enable.build.flags.debug=-g
 
 # C Runtime Library
 Nucleo_144.menu.rtlib.nano=Newlib Nano (default)
@@ -6632,6 +7211,16 @@ GenWB.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float
 GenWB.menu.rtlib.full=Newlib Standard
 GenWB.menu.rtlib.full.build.flags.ldspecs=
 
+GenWL.menu.rtlib.nano=Newlib Nano (default)
+GenWL.menu.rtlib.nanofp=Newlib Nano + Float Printf
+GenWL.menu.rtlib.nanofp.build.flags.ldspecs=--specs=nano.specs -u _printf_float
+GenWL.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+GenWL.menu.rtlib.nanofs.build.flags.ldspecs=--specs=nano.specs -u _scanf_float
+GenWL.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+GenWL.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float -u _scanf_float
+GenWL.menu.rtlib.full=Newlib Standard
+GenWL.menu.rtlib.full.build.flags.ldspecs=
+
 ESC_board.menu.rtlib.nano=Newlib Nano (default)
 ESC_board.menu.rtlib.nanofp=Newlib Nano + Float Printf
 ESC_board.menu.rtlib.nanofp.build.flags.ldspecs=--specs=nano.specs -u _printf_float
@@ -6671,6 +7260,16 @@ GenFlight.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
 GenFlight.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float -u _scanf_float
 GenFlight.menu.rtlib.full=Newlib Standard
 GenFlight.menu.rtlib.full.build.flags.ldspecs=
+
+elecgator.menu.rtlib.nano=Newlib Nano (default)
+elecgator.menu.rtlib.nanofp=Newlib Nano + Float Printf
+elecgator.menu.rtlib.nanofp.build.flags.ldspecs=--specs=nano.specs -u _printf_float
+elecgator.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+elecgator.menu.rtlib.nanofs.build.flags.ldspecs=--specs=nano.specs -u _scanf_float
+elecgator.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+elecgator.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float -u _scanf_float
+elecgator.menu.rtlib.full=Newlib Standard
+elecgator.menu.rtlib.full.build.flags.ldspecs=
 
 Garatronic.menu.rtlib.nano=Newlib Nano (default)
 Garatronic.menu.rtlib.nanofp=Newlib Nano + Float Printf
