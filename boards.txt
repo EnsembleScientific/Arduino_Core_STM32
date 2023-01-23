@@ -8044,6 +8044,14 @@ GenL0.menu.pnum.GENERIC_L063R8TX.build.board=GENERIC_L063R8TX
 GenL0.menu.pnum.GENERIC_L063R8TX.build.product_line=STM32L063xx
 GenL0.menu.pnum.GENERIC_L063R8TX.build.variant=STM32L0xx/L052R(6-8)T_L053R(6-8)T_L063R8T
 
+# Generic L071CBTx
+GenL0.menu.pnum.GENERIC_L071CBTX=Generic L071CBTx
+GenL0.menu.pnum.GENERIC_L071CBTX.upload.maximum_size=131072
+GenL0.menu.pnum.GENERIC_L071CBTX.upload.maximum_data_size=20480
+GenL0.menu.pnum.GENERIC_L071CBTX.build.board=GENERIC_L071CBTX
+GenL0.menu.pnum.GENERIC_L071CBTX.build.product_line=STM32L071xx
+GenL0.menu.pnum.GENERIC_L071CBTX.build.variant=STM32L0xx/L071C(8-B-Z)(T-U)_L081CBT_L081CZ(T-U)
+
 # Generic L072CBTx
 GenL0.menu.pnum.GENERIC_L072CBTX=Generic L072CBTx
 GenL0.menu.pnum.GENERIC_L072CBTX.upload.maximum_size=131072
