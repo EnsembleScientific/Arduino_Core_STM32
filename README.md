@@ -577,6 +577,7 @@ User can add a STM32 based board following this [wiki](https://github.com/stm32d
 | :green_heart:  | STM32L062K8 | Generic Board | *2.4.0* |  |
 | :green_heart:  | STM32L063C8 | Generic Board | *2.4.0* |  |
 | :green_heart: | STM32L063R8T | Generic Board | *2.0.0* |  |
+| :yellow_heart:  | STM32L071CBT | Generic Board | *2.4.0* |  |
 | :green_heart:  | STM32L072CB<br>STM32L072CZ | Generic Board | *2.4.0* |  |
 | :green_heart: | STM32L072CBY<br>STM32L072CZE<br>STM32L072CZY | Generic Board | *2.0.0* |  |
 | :green_heart:  | STM32L072KB<br>STM32L072KZ | Generic Board | *2.4.0* |  |
