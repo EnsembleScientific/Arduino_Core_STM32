@@ -172,13 +172,13 @@ class SPIClass {
      * instance with begin() or beginTransaction().
      * You can specify the CS pin to use.
      */
-    virtual byte transfer(uint8_t pin, uint8_t _data, SPITransferMode _mode = SPI_LAST);
+    virtual uint8_t transfer(uint8_t pin, uint8_t _data, SPITransferMode _mode = SPI_LAST);
     virtual uint16_t transfer16(uint8_t pin, uint16_t _data, SPITransferMode _mode = SPI_LAST);
     virtual void transfer(uint8_t pin, void *_buf, size_t _count, SPITransferMode _mode = SPI_LAST);
-    virtual void transfer(byte _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode = SPI_LAST);
+    virtual void transfer(uint8_t _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode = SPI_LAST);
 
     // Transfer functions when user controls himself the CS pin.
-    byte transfer(uint8_t _data, SPITransferMode _mode = SPI_LAST)
+    uint8_t transfer(uint8_t _data, SPITransferMode _mode = SPI_LAST)
     {
       return transfer(CS_PIN_CONTROLLED_BY_USER, _data, _mode);
     }

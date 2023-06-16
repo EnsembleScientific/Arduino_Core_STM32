@@ -228,7 +228,7 @@ void SPIClass::setClockDivider(uint8_t _pin, uint8_t _divider)
   *         several CS pin.
   * @return byte received from the slave.
   */
-byte SPIClass::transfer(uint8_t _pin, uint8_t data, SPITransferMode _mode)
+uint8_t SPIClass::transfer(uint8_t _pin, uint8_t data, SPITransferMode _mode)
 {
   uint8_t rx_buffer = 0;
 
@@ -369,7 +369,7 @@ void SPIClass::transfer(uint8_t _pin, void *_buf, size_t _count, SPITransferMode
   *         That means the CS pin is not reset. Be careful in case you use
   *         several CS pin.
   */
-void SPIClass::transfer(byte _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode)
+void SPIClass::transfer(uint8_t _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode)
 {
   if ((_count == 0) || (_bufout == NULL) || (_bufin == NULL)) {
     return;
@@ -439,9 +439,9 @@ void SUBGHZSPIClass::beginTransaction(uint8_t _pin, SPISettings settings)
   SPIClass::beginTransaction(CS_PIN_CONTROLLED_BY_USER, settings);
 }
 
-byte SUBGHZSPIClass::transfer(uint8_t _pin, uint8_t _data, SPITransferMode _mode)
+uint8_t SUBGHZSPIClass::transfer(uint8_t _pin, uint8_t _data, SPITransferMode _mode)
 {
-  byte res;
+  uint8_t res;
   if (_pin != CS_PIN_CONTROLLED_BY_USER) {
     LL_PWR_SelectSUBGHZSPI_NSS();
   }
@@ -476,7 +476,7 @@ void SUBGHZSPIClass::transfer(uint8_t _pin, void *_buf, size_t _count, SPITransf
   }
 }
 
-void SUBGHZSPIClass::transfer(byte _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode)
+void SUBGHZSPIClass::transfer(uint8_t _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode)
 {
   if (_pin != CS_PIN_CONTROLLED_BY_USER) {
     LL_PWR_SelectSUBGHZSPI_NSS();
